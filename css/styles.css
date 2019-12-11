@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap');
+
+body {
+  overflow-x: hidden;
+  background: url(../img/whitepaint.jpg);
+  margin: 0;
+  color: #373B47;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-weight: 500;
+}
+
+#concept, #menu, #access, #contact {
+  padding-top: 3.55rem;
+}
+
+.navbar {
+  font-size: 0.9rem;
+  color: #373B47;
+}
+
+header {
+  width: 100vw;
+  height: 100vh;
+}
+
+.top-image {
+  position: relative;  
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/topimage05.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: -10;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.logo-coffee {
+  position: absolute;
+  top: 90%;
+  left: 90%;
+  transform: translateY(-90%) translateX(-90%);
+}
+
+.logo-bread {
+  position: absolute;
+  top: 90%;
+  left: 10%;
+  transform: translateY(-90%) translateX(-10%);
+}
+
+#concept {
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+#concept p {
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+}
+
+.concept-hr {
+  width: 10rem;
+  margin-top: 0;
+  border-top: .05rem solid;
+}
+
+.concept-logo-clerk {
+  position: absolute;
+  top: 43%;
+  left: 90%;
+  transform: translateY(-35%) translateX(-90%);  
+}
+
+.concept-logo-pizza {
+  position: absolute;
+  top: 90%;
+  left: 10%;
+  transform: translateY(-90%) translateX(-10%);  
+}
+
+#menu {
+  background: rgb(255, 255, 230, 0.5);
+  padding-bottom: 3rem;
+}
+
+.menu-hr {
+  width: 10rem;
+  margin-top: 0;
+  border-top: .05rem solid;
+}
+
+.menu-list {
+  text-align: center;
+  padding-bottom: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.menu-item {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-list p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #DDE8C8;
+  padding: 0.5rem 0;
+  border-radius: 0 0 .8rem .8rem;
+}
+
+#access {
+  padding-bottom: 3rem;
+}
+
+.access-hr {
+  width: 10rem;
+  margin-top: 0;
+  border-top: .05rem solid;
+}
+
+#map {
+  width: 510px;
+  height: 250px;
+}
+
+.map-container {
+  margin: 0;
+}
+
+.map-container h3 {
+  font-size: 1.3rem;
+}
+
+.contact-hr {
+  width: 20rem;
+  margin-top: 0;
+  border-top: .05rem solid;
+}
+
+#contact {
+  background: rgb(255, 255, 230, 0.5);
+  padding-bottom: 3rem;  
+}
+
+#contact form {
+  margin: 0 3rem 2rem;
+}
+
+.form-control {
+  border: 0.8px solid;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background: rgb(255, 255, 230, 0);
+}
+
+.form-control:focus {
+  background: rgb(255, 255, 255);
+}
+
+.input-group-text {
+  margin-bottom: 1rem;
+  border: 0.8px solid;
+  border-left: none;
+}
+
+.submit {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+footer {
+  background-color: #B3B3B3;
+  padding: 1rem 0 1rem;
+}
+
+footer a {
+  color: #373B47;
+}
+
+.footer-item {
+  padding-top: 0.7rem;
+}
+
+#page_top{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: #B3B3B3;
+  opacity: 0.8;
+  border-radius: 50%;
+  z-index: 10;
+}
+#page_top a{
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f106';
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -10px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+@media(max-width: 767px) {
+  .logo {
+    width: 430px;
+    height: 158px;
+  }
+  .logo-coffee {
+    width: 150px;
+    height: 130px;
+  }
+  .logo-bread {
+    width: 170px;
+    height: 138px;
+  }
+  .concept-logo-clerk {
+    width: 110px;
+    height: 160px;
+    left: 95%;
+  }
+  .concept-logo-pizza {
+    width: 120px;
+    height: 82px;
+    left: 5%;
+  }
+  .menu-list {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .menu-item {
+    width: 80%;
+    height: 80%;
+  }
+  .menu-list p {
+    margin: 0 auto;
+    width: 80%;
+  }
+  #map {
+    margin-bottom: 2rem;
+  }
+  .form-control {
+    padding-left: 1.08rem;
+  }
+  .input-group-text {
+    padding: 1rem 1rem;
+  }
+}
+
+@media(max-width: 575px) {
+  .logo {
+    width: 250px;
+    height: 92px;
+  }
+  .logo-coffee {
+    width: 90px;
+    height: 78px;
+  }
+  .logo-bread {
+    width: 100px;
+    height: 81px;
+  }
+  .concept-logo-clerk {
+    width: 75px;
+    height: 109px;
+    left: 98%;
+  }
+  .concept-logo-pizza {
+    width: 90px;
+    height: 61px;
+    top: 95%;
+    left: 5%;
+  }
+  #concept {
+    padding-bottom: 4rem;
+  }
+}
+
+/*============ BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/

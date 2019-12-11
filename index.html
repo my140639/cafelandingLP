@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Cafe Landing</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+
+  <!-- moment.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/ja.js"></script>
+
+  <!-- tempusdominus -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+
+  <!-- DatePicker -->
+  <script type="text/javascript">
+      $(function () {
+          $('#datetimepicker').datetimepicker({
+              locale: 'ja',
+              dayViewHeaderFormat: 'YYYY年 M月',
+              // format: 'YYYY/MM/DD h:mm A'
+              format: 'YYYY/MM/DD HH:mm',
+              tooltips: {
+                  close: '閉じる',
+                  selectMonth: '月を選択',
+                  prevMonth: '前月',
+                  nextMonth: '次月',
+                  selectYear: '年を選択',
+                  prevYear: '前年',
+                  nextYear: '次年',
+                  selectTime: '時間を選択',
+                  selectDate: '日付を選択',
+                  prevDecade: '前期間',
+                  nextDecade: '次期間',
+                  selectDecade: '期間を選択',
+                  prevCentury: '前世紀',
+                  nextCentury: '次世紀',
+                  incrementHour: '1時間後',
+                  pickHour: '時間を選択',
+                  decrementHour: '1時間前',
+                  incrementMinute: '1分後',
+                  pickMinute: '分を選択',
+                  decrementMinute: '1分前'
+              },
+              buttons: {
+                  showClose: true
+              }
+          });
+      });
+  </script>
+  <script>
+    function sendGform(){
+      const form = document.getElementById("form");
+      if(form.checkValidity()) {
+        document.getElementById('thxMessage').style.display = 'inline-block';
+        let itemlist = document.getElementsByClassName('form-control');
+        for(let i in itemlist) {
+            itemlist[i].value = '';
+        }
+      }
+    }
+
+    jQuery(function() {
+      var pagetop = $('#page_top');   
+      pagetop.hide();
+      $(window).scroll(function () {
+          if ($(this).scrollTop() > 100) {  //100pxスクロールしたら表示
+              pagetop.fadeIn();
+          } else {
+              pagetop.fadeOut();
+          }
+      });
+      pagetop.click(function () {
+          $('body,html').animate({
+              scrollTop: 0
+          }, 500); //0.5秒かけてトップへ移動
+          return false;
+      });
+    });
+  </script>  
+
+  <link rel="icon" href="img/cafe.ico">
+  <link rel="stylesheet" href="css/styles.css">
+  
+</head>
+<body>
+  <!-- ページトップボタン -->
+  <div id="page_top"><a href="#"></a></div>
+  <!-- Header -->
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#"><img src="img/logo1.png"></a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#top-menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="top-menu">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#concept">Concept</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#access">Access</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact/Reservation</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Top-image -->
+  <header class="text-center">
+    <div id="top" class="container-fluid top-image">
+      <img class="logo" src="img/logo5.png">
+      <img class="logo-coffee" src="img/coffee-logo.png">
+      <img class="logo-bread" src="img/bread-logo.png">
+    </div>
+  </header>
+  
+  <!-- Concept -->
+  <div id="concept" class="container text-center">
+    <div>
+      <h2 class="pt-4">CONCEPT</h2>
+      <hr class="concept-hr">
+      <p>Cafe Landingへようこそ</p>
+    </div>
+    <div>
+      <h3 class="pt-4">営業時間</h3>
+      <hr class="concept-hr">
+      <p>平日： 7:00～21:00</p>
+      <p>休日： 9:00～18:00</p>
+    </div>
+    <img class="concept-logo-clerk" src="img/clerk-logo2.png">
+    <img class="concept-logo-pizza" src="img/pizza-logo.png">
+  </div>
+
+  <!-- Menu -->
+  <div id="menu" class="container-fluid">
+    <div class="text-center pb-4">
+      <h2 class="pt-4">MENU</h2>
+      <hr class="menu-hr">
+    </div>
+    <div class="row menu-list">
+      <div class="col-md-4">
+        <img class="menu-item" src="img/coffee.jpg">
+        <p>Coffee 200yen</p>
+      </div>
+      <div class="col-md-4">
+        <img class="menu-item" src="img/salad.jpg">
+        <p>Green Salad 300yen</p>
+      </div>
+      <div class="col-md-4">
+        <img class="menu-item" src="img/pizza.jpg">
+        <p>Pizza 980yen</p>
+      </div>
+    </div>
+    <div class="row menu-list">
+      <div class="col-md-4">
+        <img class="menu-item" src="img/pilaf.jpg">
+        <p>Pilaf 630yen</p>
+      </div>
+      <div class="col-md-4">
+        <img class="menu-item" src="img/Tiramisu.jpg">
+        <p>Tiramisu 450yen</p>
+      </div>
+      <div class="col-sm-4">
+        <img class="menu-item" src="img/breakfast.jpg">
+        <p>SetMenu 1,080yen</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Access -->
+  <div id="access" class="container">
+    <div class="text-center pb-3">
+      <h2 class="pt-4">ACCESS</h2>
+      <hr class="access-hr">
+    </div>
+    <div class="row text-center map-container">
+      <div id="map" class="col-md-6"></div>
+      <div class="col-md-6">
+        <h3>アクセス</h3>
+        <p>東京都  XXX区  XXX町 123-456-789</p>
+        <br>
+        <h3>最寄り駅</h3>
+        <p>AAAA線 XXXX駅から徒歩5分</p>
+        <p>BBBB線 YYYY駅から徒歩8分</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Contact/Reservation -->
+  <div id="contact" class="container-fluid">
+    <div class="text-center pb-3">
+      <h2 class="pt-4">CONTACT/RESERVATION</h2>
+      <hr class="contact-hr">
+    </div>
+    <form id="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdG91tm4jtp-ks0E8rsEbX6Y9t-VFne-yAMfGCIhgn20P3NLA/formResponse" method="POST" name="contact-form" class="text-center form-group" target="dummyIframe">
+      <div class="row">
+        <div class="col-md-6">
+          <input type="text" name="entry.1576324848" class="form-control" placeholder="お名前（必須）" required>
+        </div>
+        <div class="col-md-6">
+          <input type="text" name="entry.437093294" class="form-control" placeholder="お名前（フリガナ）（必須）" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 input-group date" id="datetimepicker" data-target-input="nearest">
+          <input type="text" name="entry.1979008419" placeholder="ご予約の日付（例：2019/12/01 10:00）" class="form-control datetimepicker-input" data-target="#datetimepicker">
+          <div class="input-group-append" data-target="#datetimepicker" data-toggle="datetimepicker">
+              <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <input type="number" name="entry.1853222813" class="form-control" placeholder="ご予約の人数">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <input type="tel" name="entry.827551418" class="form-control" placeholder="電話番号">
+        </div>
+        <div class="col-md-6">
+          <input type="email" name="emailAddress" class="form-control" placeholder="E-Mail（必須）" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <textarea name="entry.460338091" class="form-control" placeholder="お問い合わせ内容"></textarea>
+        </div>
+      </div>
+      <div class="text-left">
+        <input type="submit" value="送信" class="btn btn-primary submit">
+        <span id="thxMessage" style="display:none;">お問い合わせありがとうございます。</span>
+        <p style="margin-top: 1rem;">※全ての必須項目を入力して「送信」ボタンをクリックすると、Google Formsに内容が送信されてしまいますので注意してください。</p>
+      </div>
+    </form>
+    <iframe name="dummyIframe" style="display:none;" onload="sendGform();"></iframe>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="row text-center">
+      <div class="col-md-3">
+        <a href="#"><img src="img/logo1.png"></a>
+      </div>
+      <div class="col-md-9">
+        <div class="row footer-item">
+          <div class="col-md-4">
+            <a href="#">店舗情報</a>
+          </div>
+          <div class="col-md-4">
+            <a href="#">プライバシーポリシー</a>
+          </div>
+          <div class="col-md-4">
+            &copy; Cafe Landing
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Google Maps -->
+  <script src="http://maps.google.com/maps/api/js?key=AIzaSyC02v5m-XwPUQkRRjtl78iFBEKZezHVUzw&language=ja"></script>
+  <script>
+    let MyLatLng = new google.maps.LatLng(35.6811673, 139.7670516);
+    let Options = {
+      zoom: 17,      //地図の縮尺値
+      center: MyLatLng,    //地図の中心座標
+      mapTypeId: 'roadmap'   //地図の種類
+    };
+    let map = new google.maps.Map(document.getElementById('map'), Options);
+  </script>
+</body>
+</html>
